@@ -1,0 +1,148 @@
+/* remove browser default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* styles to be applied to all body elements */
+body {
+    font-size: 1.125rem;
+    background: #cbd4c2;
+    color: #222;
+    margin-bottom: 200px;
+}
+
+/* generic block tag stylings */
+h1, h2, h3 {
+    font-family: 'Inconsolata', monospace;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+h2, h3 {
+    margin-top: 20px;
+}
+
+/* allows for CSS grid to be used on the main container */
+.container {
+    display: grid;
+    grid-template-columns: [main-start] 15% [content-start] auto [content-end] 15% [main-end];
+    
+}
+
+/* begin header and nav-bar styles */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e746d;
+    min-height: 400px;
+    grid-column-start: main;
+    grid-column-end: main;
+    background-image: url('../images/webdesign.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+/* nav-bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    min-height: 58px;
+    grid-column-start: main;
+    grid-column-end: main;
+}
+
+
+/* makes nav-bar sticky, added on scroll via js */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar ul li {
+    list-style: none;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #cbd4c2;
+    font-family: 'Inconsolata', monospace;
+    padding: 20px;
+}
+
+.nav-bar ul li a:hover {
+    background: #185893;
+}
+/* end header and nav-bar styles */
+
+.main-img {
+    grid-column-start: main;
+    grid-column-end: main;
+}
+
+/* make img responsive */
+.img img {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+/* three column layout with content in middle column */
+.content {
+    grid-column-start: content;
+    grid-column-end: content;
+    margin-top: 20px;
+}
+
+/* skills section styling */
+.skills-list {
+    font-family: 'Lato', sans-serif;
+    margin: 20px;
+}
+
+/* hobbies section styling */
+.gaa-link {
+    color: #1e746d;
+}
+
+.hurling-video {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.rl-img {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+/* sticky footer */
+.main-footer {
+    min-height: 60px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    color: #cbd4c2;
+    font-family: 'Lato', sans-serif;
+}
